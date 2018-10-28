@@ -1,0 +1,49 @@
+$topnav-background-color: rgb(236, 235, 132);
+:host {
+    .navbar {
+        background-color: $topnav-background-color;
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item > a {
+            color: #fff;
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.75rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
