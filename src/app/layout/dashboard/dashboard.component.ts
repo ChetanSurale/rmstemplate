@@ -10,6 +10,14 @@ import { routerTransition } from '../../router.animations';
 export class DashboardComponent implements OnInit {
     public alerts: Array<any> = [];
     public sliders: Array<any> = [];
+    toggle: boolean = false;
+    toggle1: boolean = false;
+    toggle2: boolean = false;
+    toggle3: boolean = false;
+    isVissible1: boolean = true;
+    isVissible2: boolean = true;
+    isVissible3: boolean = true;
+    isVissible4: boolean = true;
 
     constructor() {
         this.sliders.push(
@@ -52,10 +60,54 @@ export class DashboardComponent implements OnInit {
         );
     }
 
-    ngOnInit() {}
+    ngOnInit() { }
 
     public closeAlert(alert: any) {
         const index: number = this.alerts.indexOf(alert);
         this.alerts.splice(index, 1);
+    }
+
+    togglefn() {
+        this.toggle = !this.toggle;
+        this.toggle1 = false;
+        this.toggle2 = false;
+        this.toggle3 = false;
+        this.isVissible1 = !this.isVissible1;
+        this.isVissible2 = !this.isVissible2;
+        this.isVissible3 = !this.isVissible3;
+        this.isVissible4 = !this.isVissible4;
+    }
+
+    togglefn1() {
+        this.toggle1 = !this.toggle1;
+        this.toggle = false;
+        this.toggle2 = false;
+        this.toggle3 = false;
+        this.isVissible1 = !this.isVissible1;
+        this.isVissible2 = !this.isVissible2;
+        this.isVissible3 = !this.isVissible3;
+        this.isVissible4 = !this.isVissible4;
+    }
+
+    togglefn2() {
+        this.toggle2 = !this.toggle2;
+        this.toggle1 = false;
+        this.toggle = false;
+        this.toggle3 = false;
+        this.isVissible1 = !this.isVissible1;
+        this.isVissible2 = !this.isVissible2;
+        this.isVissible3 = !this.isVissible3;
+        this.isVissible4 = !this.isVissible4;
+    }
+
+    togglefn3() {
+        this.toggle3 = !this.toggle3;
+        this.toggle1 = false;
+        this.toggle2 = false;
+        this.toggle = false;
+        this.isVissible1 = !this.isVissible1;
+        this.isVissible2 = !this.isVissible2;
+        this.isVissible3 = !this.isVissible3;
+        this.isVissible4 = !this.isVissible4;
     }
 }
